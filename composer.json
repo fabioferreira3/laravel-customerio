@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=7.4"
     },
     "require-dev": {},
     "extra": {
@@ -23,11 +23,6 @@
                 "CustomerIO": "FabioFerreira\\CustomerIO\\Facades\\CustomerIO"
             },
             "dont-discover": []
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "FabioFerreira\\CustomerIO\\": "packages/fabioferreira/customerio/src/"
         }
     }
 }
