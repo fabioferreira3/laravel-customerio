@@ -1,0 +1,33 @@
+{
+    "name": "fabioferreira/customerio",
+    "description": "Customer IO Laravel package",
+    "homepage": "https://github.com/fabioferreira/laravel-customerio",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fabio Ferreira",
+            "email": "fabio86ferreira@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "require-dev": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FabioFerreira\\CustomerIO\\CustomerIOServiceProvider"
+            ],
+            "aliases": {
+                "CustomerIO": "FabioFerreira\\CustomerIO\\Facades\\CustomerIO"
+            },
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "FabioFerreira\\CustomerIO\\": "packages/fabioferreira/customerio/src/"
+        }
+    }
+}
