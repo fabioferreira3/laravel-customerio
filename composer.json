@@ -24,5 +24,10 @@
             },
             "dont-discover": []
         }
+    },
+    "autoload": {
+        "psr-4": {
+            "FabioFerreira\\CustomerIO\\": "src/"
+        }
     }
 }
