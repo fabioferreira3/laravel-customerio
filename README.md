@@ -40,8 +40,8 @@ Route::get('/create-customer', function () {
 
 Method | Parameters | Description
 --- | --- | ---
-createCustomer | string customerId, array customerAttributes | Create a new customer
-updateCustomer | string customerId, array customerAttributes | Update a customer by its ID
+createCustomer | string customerId, array customerAttributes | Creates a new customer
+updateCustomer | string customerId, array customerAttributes | Updates a customer by its ID
 triggerEventOnCustomer | string customerId, string eventName, array eventAttributes | Sends an event on a customer
 
 ## Contributing
