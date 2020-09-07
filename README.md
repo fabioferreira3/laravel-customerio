@@ -7,7 +7,8 @@
 
 ## About
 
-* Laravel CustomerIO is a module that implements the customer.io service API in the Laravel framework.
+* [CustomerIO](https://customer.io) 
+* [Laravel](https://laravel.com)
 
 ## Installation
 
