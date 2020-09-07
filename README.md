@@ -42,8 +42,9 @@ Method | Parameters | Description
 --- | --- | ---
 createCustomer | string customerId, array customerAttributes | Creates a new customer
 updateCustomer | string customerId, array customerAttributes | Updates a customer by its ID
+deleteCustomer | string customerId | Deletes a customer by its ID
 triggerEventOnCustomer | string customerId, string eventName, array eventAttributes | Sends an event on a customer
-
+triggerAnonymousEvent | string eventName, array eventAttributes | Sends an anonymous event
 ## Contributing
 
 Feel free to create issues and report bugs.

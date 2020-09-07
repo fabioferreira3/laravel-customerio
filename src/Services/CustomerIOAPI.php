@@ -23,6 +23,11 @@ class CustomerIOAPI
         return "$this->customerEndpoint/$id";
     }
 
+    private function anonymousEventTrackerEndpoint()
+    {
+        return "$this->mainUrl/events";
+    }
+
     private function customerEventTrackerEndpoint(string $id)
     {
         return "$this->customerEndpoint/$id/events";
@@ -38,7 +43,16 @@ class CustomerIOAPI
         return $this->connect->delete(static::customerTrackerEndpoint($customerId));
     }
 
-    public function postEvent($customerId, $eventName, $eventAttributes)
+    public function postAnonymousEvent($eventName, $eventAttributes)
+    {
+        $eventPayload = ['name' => $eventName];
+        if (count($eventAttributes)) {
+            $eventPayload['data'] = $eventAttributes;
+        }
+        return $this->connect->post(static::anonymousEventTrackerEndpoint(), $eventPayload);
+    }
+
+    public function postCustomerEvent($customerId, $eventName, $eventAttributes)
     {
         $eventPayload = ['name' => $eventName];
         if (count($eventAttributes)) {

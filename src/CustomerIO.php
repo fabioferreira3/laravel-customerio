@@ -33,8 +33,13 @@ class CustomerIO
         return $this->api->deleteCustomer($customerId);
     }
 
+    public function triggerAnonymousEvent($eventName, $eventAttributes = [])
+    {
+        return $this->api->postAnonymousEvent($eventName, $eventAttributes);
+    }
+
     public function triggerEventOnCustomer($customerId, $eventName, $eventAttributes = [])
     {
-        return $this->api->postEvent($customerId, $eventName, $eventAttributes);
+        return $this->api->postCustomerEvent($customerId, $eventName, $eventAttributes);
     }
 }
